@@ -13,10 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
 from django.conf.urls import url
 from django.contrib import admin
-from publisher import views as publiser
+from publisher import views as publisher
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', publiser.publisher_list),
+    url(r'^$', publisher.root),
+    url(r'^publisher_list/', publisher.publisher_list),
+    url(r'^add_publisher/', publisher.add_publisher),
+    url(r'^del_publisher/', publisher.del_publisher),
+    url(r'^edit_publisher/', publisher.edit_publisher),
 ]

@@ -1,0 +1,14 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <title></title>
+</head>
+{{ dict1 }}
+{#{% for foo in dict1 %}#}
+{#    {{ foo }}#}
+{#{% endfor %}#}
+
+{% for key,value in dict1 %}
+	{{ key }},{{ value }}
+{% endfor %}
+</html>

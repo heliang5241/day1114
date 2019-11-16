@@ -1,8 +1,8 @@
 from django.shortcuts import render,HttpResponse,redirect
 from publisher import models
-# Create your views here.
 import redis
 import re
+# Create your views here.
 
 def root(request):
     return render(request,'all.html')
